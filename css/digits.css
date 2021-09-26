@@ -1,0 +1,14 @@
+td {
+    width: 33.3vw;
+    height: 33.3vw;
+    text-align: center;
+    vertical-align: center;
+    font-size: 28vw;
+}
+
+#shuf {
+    width: 8vw;
+    height: 8vw;
+    font-size: 5vw;
+    margin-left: 46vw;
+}
