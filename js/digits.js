@@ -1,4 +1,7 @@
 $(function () {
+    var audio = new Audio("/audio/praise.mp3");
+    audio.autoplay = false;
+
     $("#shuf").click(function () {
         var num = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
         for (var i = 0; i < num.length; ++i) {
@@ -19,5 +22,10 @@ $(function () {
         setTimeout(function () {
             $("td").css("background", "none");
         }, 300);
+
+        if ($(this).text() == "1") {
+            audio.currentTime = 0;
+            audio.play();
+        }
     });
 });
