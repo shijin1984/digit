@@ -14,11 +14,10 @@ $(function () {
     });
 
     $("td").click(function () {
-        $(this).animate({ "background": "lightgreen" }, {
-            duration: "fast",
-            always: function() {
-                $("td").css("background", "none");
-            }
-        });
+        // TODO(shijin1984): $(this).animate() does not work, why?
+        $(this).css("background", "lightgreen");
+        setTimeout(function () {
+            $("td").css("background", "none");
+        }, 300);
     });
 });
