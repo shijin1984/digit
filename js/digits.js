@@ -1,5 +1,5 @@
 $(function () {
-    var audio = new Audio("/audio/praise.mp3");
+    var audio = new Audio("audio/praise.mp3");
     audio.autoplay = false;
 
     $("#shuf").click(function () {
