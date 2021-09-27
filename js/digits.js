@@ -1,6 +1,14 @@
 $(function () {
     var audio = new Audio("audio/praise.mp3");
     audio.autoplay = false;
+    var fontCollection = [
+        "cursive", "emoji", "monospace", "serif", "sans-serif", "Verdana",
+        "Comic Sans MS"];
+
+    var randomSelect(array) {
+        var index = Math.floor(Math.random() * array.length);
+        return array[index];
+    }
 
     $("#shuf").click(function () {
         var num = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -14,6 +22,8 @@ $(function () {
         for (var i = 0; i < num.length; ++i) {
             $("td").eq(i).text(num[i]);
         }
+
+        $("td").css("font-family", randomSelect(fontCollection));
     });
 
     $("td").click(function () {
@@ -28,4 +38,6 @@ $(function () {
             audio.play();
         }
     });
+
+    $("td").click();  // Shuffle on loading.
 });
