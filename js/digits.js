@@ -5,10 +5,10 @@ $(function () {
         "cursive", "emoji", "monospace", "serif", "sans-serif", "Verdana",
         "Comic Sans MS"];
 
-    var randomSelect(array) {
+    var randomSelect = function (array) {
         var index = Math.floor(Math.random() * array.length);
         return array[index];
-    }
+    };
 
     $("#shuf").click(function () {
         var num = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
