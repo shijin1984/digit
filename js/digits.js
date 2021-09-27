@@ -7,7 +7,7 @@ $(function () {
 
 
     for (var num = 1; num <= 9; ++num) {
-        $("#tgt").append($("<option/>", {text: i, value: i}));
+        $("#tgt").append($("<option/>", {text: num, value: num}));
     }
     $("#tgt").val("1");
 
