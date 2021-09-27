@@ -5,6 +5,16 @@ $(function () {
         "cursive", "emoji", "monospace", "serif", "sans-serif", "Verdana",
         "Comic Sans MS"];
 
+
+    for (var num = 1; num <= 9; ++num) {
+        $("#tgt").append($("<option/>", {text: i, value: i}));
+    }
+    $("#tgt").val("1");
+
+    var getTargetDigit = function() {
+        return $("#tgt").val();
+    };
+
     var randomSelect = function (array) {
         var index = Math.floor(Math.random() * array.length);
         return array[index];
@@ -33,11 +43,12 @@ $(function () {
             $("td").css("background", "none");
         }, 300);
 
-        if ($(this).text() == "1") {
+        if ($(this).text() == getTargetDigit()) {
             audio.currentTime = 0;
             audio.play();
         }
     });
+
 
     $("#shuf").click();  // Shuffle on loading.
 });

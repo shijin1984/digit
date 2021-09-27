@@ -7,8 +7,11 @@ td {
 }
 
 #shuf {
-    width: 8vw;
-    height: 8vw;
-    font-size: 5vw;
-    margin-left: 46vw;
+    margin-left: 44vw;
+}
+
+.common {
+    width: 12vw;
+    height: 12vw;
+    font-size: 10vw;
 }
