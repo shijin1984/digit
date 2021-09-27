@@ -44,8 +44,11 @@ $(function () {
         }, 300);
 
         if ($(this).text() == getTargetDigit()) {
-            audio.currentTime = 0;
-            audio.play();
+            // The kids can tap repeatedly, replay only if the audio is not playing.
+            if (audio.paused || audio.ended) {
+                audio.currentTime = 0;
+                audio.play();
+            }
         }
     });
 
