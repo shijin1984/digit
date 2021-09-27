@@ -39,5 +39,5 @@ $(function () {
         }
     });
 
-    $("td").click();  // Shuffle on loading.
+    $("#shuf").click();  // Shuffle on loading.
 });
