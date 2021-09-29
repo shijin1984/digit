@@ -1,9 +1,17 @@
-td {
+.dgt3x3 {
     width: 33.3vw;
     height: 33.3vw;
     text-align: center;
     vertical-align: center;
     font-size: 28vw;
+}
+
+.dgt2x2 {
+    width: 50vw;
+    height: 50vw;
+    text-align: center;
+    vertical-align: center;
+    font-size: 45vw;
 }
 
 #shuf {
@@ -13,4 +21,9 @@ td {
 .common {
     height: 12vw;
     font-size: 10vw;
+}
+
+.tgt_drop {
+    height: 25vw;
+    font-size: 20vw;
 }
