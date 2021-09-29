@@ -12,7 +12,7 @@ $(function () {
 
     if (urlParams.has("digits")) {
         var digitStr = urlParams.get("digits");
-        digits = digitStr.split();
+        digits = digitStr.split("");
     }
     digitsConfig = {
         audio: audio,
