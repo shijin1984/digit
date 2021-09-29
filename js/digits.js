@@ -1,4 +1,4 @@
-var digits_config {};
+var digitsConfig = {};
 
 $(function () {
     var audio = new Audio("audio/praise.mp3");
@@ -14,16 +14,16 @@ $(function () {
         var digitStr = urlParams.get("digits");
         digits = digitStr.split();
     }
-    digits_config = {
+    digitsConfig = {
         audio: audio,
         fontCollection: fontCollection,
         digits: digits
     };
 
-    digits_config.digits.forEach(function(num) {
+    digitsConfig.digits.forEach(function(num) {
         $("#tgt").append($("<option/>", {text: num, value: num, class: "tgt_drop"}));
     });
-    $("#tgt").val(digits_config.digits[0]);
+    $("#tgt").val(digitsConfig.digits[0]);
 
     var getTargetDigit = function() {
         return $("#tgt").val();
@@ -35,7 +35,7 @@ $(function () {
     };
 
     $("#shuf").click(function () {
-        var num = digits_config.digits.slice();
+        var num = digitsConfig.digits.slice();
         for (var i = 0; i < num.length; ++i) {
             var j = Math.floor(Math.random() * (i + 1));
             var tmp = num[i];
@@ -47,7 +47,7 @@ $(function () {
             $("td").eq(i).text(num[i]);
         }
 
-        $("td").css("font-family", randomSelect(digits_config.fontCollection));
+        $("td").css("font-family", randomSelect(digitsConfig.fontCollection));
     });
 
     $("td").click(function () {
