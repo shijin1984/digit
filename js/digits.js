@@ -1,7 +1,7 @@
 var digitsConfig = {};
 
 $(function () {
-    var audio = new Audio("audio/praise.mp3");
+    var audio = new Audio("audio/praise2.mp3");
     audio.autoplay = false;
     // var fontCollection = [
     //     "cursive", "emoji", "monospace", "serif", "sans-serif", "Verdana",
