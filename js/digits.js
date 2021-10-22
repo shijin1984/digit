@@ -3,9 +3,10 @@ var digitsConfig = {};
 $(function () {
     var audio = new Audio("audio/praise.mp3");
     audio.autoplay = false;
-    var fontCollection = [
-        "cursive", "emoji", "monospace", "serif", "sans-serif", "Verdana",
-        "Comic Sans MS"];
+    // var fontCollection = [
+    //     "cursive", "emoji", "monospace", "serif", "sans-serif", "Verdana",
+    //     "Comic Sans MS"];
+    var fontCollection = [];  // Disable random fonts.
     var urlParams = new URLSearchParams(window.location.search);
 
     var digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -30,6 +31,9 @@ $(function () {
     };
 
     var randomSelect = function (array) {
+        if (!array) {
+            return null;
+        }
         var index = Math.floor(Math.random() * array.length);
         return array[index];
     };
@@ -47,7 +51,9 @@ $(function () {
             $("td").eq(i).text(num[i]);
         }
 
-        $("td").css("font-family", randomSelect(digitsConfig.fontCollection));
+        if (digitsConfig.fontCollection) {
+            $("td").css("font-family", randomSelect(digitsConfig.fontCollection));
+        }
     });
 
     $("td").click(function () {
