@@ -54,6 +54,9 @@ $(function () {
         if (digitsConfig.fontCollection) {
             $("td").css("font-family", randomSelect(digitsConfig.fontCollection));
         }
+
+        // Also change the target.
+        $("#tgt").val(randomSelect(digitsConfig.digits));
     });
 
     $("td").click(function () {
